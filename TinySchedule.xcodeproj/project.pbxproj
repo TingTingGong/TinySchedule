@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED0E1A231EA447B8004D1884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A221EA447B8004D1884 /* main.m */; };
+		ED0E1A261EA447B8004D1884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A251EA447B8004D1884 /* AppDelegate.m */; };
+		ED0E1A291EA447B8004D1884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A281EA447B8004D1884 /* ViewController.m */; };
+		ED0E1A2C1EA447B8004D1884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0E1A2A1EA447B8004D1884 /* Main.storyboard */; };
+		ED0E1A2F1EA447B8004D1884 /* TinySchedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A2D1EA447B8004D1884 /* TinySchedule.xcdatamodeld */; };
+		ED0E1A311EA447B8004D1884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0E1A301EA447B8004D1884 /* Assets.xcassets */; };
+		ED0E1A341EA447B8004D1884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0E1A321EA447B8004D1884 /* LaunchScreen.storyboard */; };
+		ED0E1A3F1EA447B8004D1884 /* TinyScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A3E1EA447B8004D1884 /* TinyScheduleTests.m */; };
+		ED0E1A4A1EA447B8004D1884 /* TinyScheduleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E1A491EA447B8004D1884 /* TinyScheduleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED0E1A3B1EA447B8004D1884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0E1A161EA447B8004D1884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED0E1A1D1EA447B8004D1884;
+			remoteInfo = TinySchedule;
+		};
+		ED0E1A461EA447B8004D1884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0E1A161EA447B8004D1884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED0E1A1D1EA447B8004D1884;
+			remoteInfo = TinySchedule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED0E1A1E1EA447B8004D1884 /* TinySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0E1A221EA447B8004D1884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED0E1A241EA447B8004D1884 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED0E1A251EA447B8004D1884 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED0E1A271EA447B8004D1884 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED0E1A281EA447B8004D1884 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED0E1A2B1EA447B8004D1884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED0E1A2E1EA447B8004D1884 /* TinySchedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinySchedule.xcdatamodel; sourceTree = "<group>"; };
+		ED0E1A301EA447B8004D1884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED0E1A331EA447B8004D1884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED0E1A351EA447B8004D1884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0E1A3A1EA447B8004D1884 /* TinyScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0E1A3E1EA447B8004D1884 /* TinyScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinyScheduleTests.m; sourceTree = "<group>"; };
+		ED0E1A401EA447B8004D1884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0E1A451EA447B8004D1884 /* TinyScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0E1A491EA447B8004D1884 /* TinyScheduleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinyScheduleUITests.m; sourceTree = "<group>"; };
+		ED0E1A4B1EA447B8004D1884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED0E1A1B1EA447B8004D1884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A371EA447B8004D1884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A421EA447B8004D1884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED0E1A151EA447B8004D1884 = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A201EA447B8004D1884 /* TinySchedule */,
+				ED0E1A3D1EA447B8004D1884 /* TinyScheduleTests */,
+				ED0E1A481EA447B8004D1884 /* TinyScheduleUITests */,
+				ED0E1A1F1EA447B8004D1884 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED0E1A1F1EA447B8004D1884 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A1E1EA447B8004D1884 /* TinySchedule.app */,
+				ED0E1A3A1EA447B8004D1884 /* TinyScheduleTests.xctest */,
+				ED0E1A451EA447B8004D1884 /* TinyScheduleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED0E1A201EA447B8004D1884 /* TinySchedule */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A241EA447B8004D1884 /* AppDelegate.h */,
+				ED0E1A251EA447B8004D1884 /* AppDelegate.m */,
+				ED0E1A271EA447B8004D1884 /* ViewController.h */,
+				ED0E1A281EA447B8004D1884 /* ViewController.m */,
+				ED0E1A2A1EA447B8004D1884 /* Main.storyboard */,
+				ED0E1A301EA447B8004D1884 /* Assets.xcassets */,
+				ED0E1A321EA447B8004D1884 /* LaunchScreen.storyboard */,
+				ED0E1A351EA447B8004D1884 /* Info.plist */,
+				ED0E1A2D1EA447B8004D1884 /* TinySchedule.xcdatamodeld */,
+				ED0E1A211EA447B8004D1884 /* Supporting Files */,
+			);
+			path = TinySchedule;
+			sourceTree = "<group>";
+		};
+		ED0E1A211EA447B8004D1884 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A221EA447B8004D1884 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED0E1A3D1EA447B8004D1884 /* TinyScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A3E1EA447B8004D1884 /* TinyScheduleTests.m */,
+				ED0E1A401EA447B8004D1884 /* Info.plist */,
+			);
+			path = TinyScheduleTests;
+			sourceTree = "<group>";
+		};
+		ED0E1A481EA447B8004D1884 /* TinyScheduleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E1A491EA447B8004D1884 /* TinyScheduleUITests.m */,
+				ED0E1A4B1EA447B8004D1884 /* Info.plist */,
+			);
+			path = TinyScheduleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED0E1A1D1EA447B8004D1884 /* TinySchedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0E1A4E1EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinySchedule" */;
+			buildPhases = (
+				ED0E1A1A1EA447B8004D1884 /* Sources */,
+				ED0E1A1B1EA447B8004D1884 /* Frameworks */,
+				ED0E1A1C1EA447B8004D1884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinySchedule;
+			productName = TinySchedule;
+			productReference = ED0E1A1E1EA447B8004D1884 /* TinySchedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED0E1A391EA447B8004D1884 /* TinyScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0E1A511EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinyScheduleTests" */;
+			buildPhases = (
+				ED0E1A361EA447B8004D1884 /* Sources */,
+				ED0E1A371EA447B8004D1884 /* Frameworks */,
+				ED0E1A381EA447B8004D1884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED0E1A3C1EA447B8004D1884 /* PBXTargetDependency */,
+			);
+			name = TinyScheduleTests;
+			productName = TinyScheduleTests;
+			productReference = ED0E1A3A1EA447B8004D1884 /* TinyScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED0E1A441EA447B8004D1884 /* TinyScheduleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0E1A541EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinyScheduleUITests" */;
+			buildPhases = (
+				ED0E1A411EA447B8004D1884 /* Sources */,
+				ED0E1A421EA447B8004D1884 /* Frameworks */,
+				ED0E1A431EA447B8004D1884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED0E1A471EA447B8004D1884 /* PBXTargetDependency */,
+			);
+			name = TinyScheduleUITests;
+			productName = TinyScheduleUITests;
+			productReference = ED0E1A451EA447B8004D1884 /* TinyScheduleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED0E1A161EA447B8004D1884 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = TinyWorks_Dev;
+				TargetAttributes = {
+					ED0E1A1D1EA447B8004D1884 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					ED0E1A391EA447B8004D1884 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED0E1A1D1EA447B8004D1884;
+					};
+					ED0E1A441EA447B8004D1884 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED0E1A1D1EA447B8004D1884;
+					};
+				};
+			};
+			buildConfigurationList = ED0E1A191EA447B8004D1884 /* Build configuration list for PBXProject "TinySchedule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED0E1A151EA447B8004D1884;
+			productRefGroup = ED0E1A1F1EA447B8004D1884 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED0E1A1D1EA447B8004D1884 /* TinySchedule */,
+				ED0E1A391EA447B8004D1884 /* TinyScheduleTests */,
+				ED0E1A441EA447B8004D1884 /* TinyScheduleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED0E1A1C1EA447B8004D1884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0E1A341EA447B8004D1884 /* LaunchScreen.storyboard in Resources */,
+				ED0E1A311EA447B8004D1884 /* Assets.xcassets in Resources */,
+				ED0E1A2C1EA447B8004D1884 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A381EA447B8004D1884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A431EA447B8004D1884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED0E1A1A1EA447B8004D1884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0E1A291EA447B8004D1884 /* ViewController.m in Sources */,
+				ED0E1A261EA447B8004D1884 /* AppDelegate.m in Sources */,
+				ED0E1A2F1EA447B8004D1884 /* TinySchedule.xcdatamodeld in Sources */,
+				ED0E1A231EA447B8004D1884 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A361EA447B8004D1884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0E1A3F1EA447B8004D1884 /* TinyScheduleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E1A411EA447B8004D1884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0E1A4A1EA447B8004D1884 /* TinyScheduleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED0E1A3C1EA447B8004D1884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED0E1A1D1EA447B8004D1884 /* TinySchedule */;
+			targetProxy = ED0E1A3B1EA447B8004D1884 /* PBXContainerItemProxy */;
+		};
+		ED0E1A471EA447B8004D1884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED0E1A1D1EA447B8004D1884 /* TinySchedule */;
+			targetProxy = ED0E1A461EA447B8004D1884 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED0E1A2A1EA447B8004D1884 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED0E1A2B1EA447B8004D1884 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED0E1A321EA447B8004D1884 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED0E1A331EA447B8004D1884 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED0E1A4C1EA447B8004D1884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED0E1A4D1EA447B8004D1884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED0E1A4F1EA447B8004D1884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TinySchedule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinySchedule";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED0E1A501EA447B8004D1884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TinySchedule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinySchedule";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED0E1A521EA447B8004D1884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TinyScheduleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinyScheduleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinySchedule.app/TinySchedule";
+			};
+			name = Debug;
+		};
+		ED0E1A531EA447B8004D1884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TinyScheduleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinyScheduleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinySchedule.app/TinySchedule";
+			};
+			name = Release;
+		};
+		ED0E1A551EA447B8004D1884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TinyScheduleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinyScheduleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TinySchedule;
+			};
+			name = Debug;
+		};
+		ED0E1A561EA447B8004D1884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TinyScheduleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TinyWorks-Dev.TinyScheduleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TinySchedule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED0E1A191EA447B8004D1884 /* Build configuration list for PBXProject "TinySchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0E1A4C1EA447B8004D1884 /* Debug */,
+				ED0E1A4D1EA447B8004D1884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED0E1A4E1EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinySchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0E1A4F1EA447B8004D1884 /* Debug */,
+				ED0E1A501EA447B8004D1884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED0E1A511EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinyScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0E1A521EA447B8004D1884 /* Debug */,
+				ED0E1A531EA447B8004D1884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED0E1A541EA447B8004D1884 /* Build configuration list for PBXNativeTarget "TinyScheduleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0E1A551EA447B8004D1884 /* Debug */,
+				ED0E1A561EA447B8004D1884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED0E1A2D1EA447B8004D1884 /* TinySchedule.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED0E1A2E1EA447B8004D1884 /* TinySchedule.xcdatamodel */,
+			);
+			currentVersion = ED0E1A2E1EA447B8004D1884 /* TinySchedule.xcdatamodel */;
+			path = TinySchedule.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED0E1A161EA447B8004D1884 /* Project object */;
+}
