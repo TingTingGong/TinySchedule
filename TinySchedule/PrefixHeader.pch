@@ -1,0 +1,197 @@
+//
+//  PrefixHeader.pch
+//  TinySchedule
+//
+//  Created by TinyWorks_Dev on 2017/4/17.
+//  Copyright © 2017年 TinyWorks_Dev. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma    -mark APP name
+#define    APPIRATER_APP_NAME  @"Tiny Schedule"
+
+
+#pragma    -mark  current system version
+#define    SystemVersion(version) [UIDevice currentDevice].systemVersion.doubleValue >= version
+
+
+#pragma    -mark header file
+
+#import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <EventKit/EventKit.h>
+#import <MessageUI/MessageUI.h>
+#import <CoreData/CoreData.h>
+
+#import <Contacts/Contacts.h>
+#import <ContactsUI/ContactsUI.h>
+
+#import "AppDelegate.h"
+
+#import "DatabaseManager.h"
+#import "DynamoDBManager.h"
+#import "StringManager.h"
+#import "UserEntity.h"
+
+#import "KLoadingView.h"
+#import "NoNetworkPopView.h"
+#import "MostColor.h"
+#import "SyncNewCalendar.h"
+
+#import "HttpRequestManager.h"
+
+
+#pragma    -mark conut
+#define IntroduceViewsNumbers 4
+
+#pragma    CurrentApplicationName                @"Tiny Schedule"
+
+#pragma    -mark all width and height
+#define    ScreenFrame                    [UIScreen mainScreen].frame
+#define    ScreenSize                     [UIScreen mainScreen].bounds.size
+#define    ScreenWidth                    [UIScreen mainScreen].bounds.size.width
+#define    ScreenHeight                   [UIScreen mainScreen].bounds.size.height
+#define    NavibarHeight                  64
+#define    OpenShiftEmployeeUuid          @"000000"
+#define    UnassignedPositionUuid         @"111111"
+#define    OpenShiftEmployeeName          @"OpenShift"
+#define    NotificationTitle_NewEmployee  @"You have a new employee"
+
+#define    AnimatedDuration               0.3
+#define    SemiboldFontName               @".SFUIText-Semibold"
+#define    RegularFontName                @".SFUIText-Regular"
+#define    LightFontName                  @".SFUIText-Light"
+#define    DisplayLightFontName           @".SFUIDisplay-Light"
+#define    SetAttributeText(text,color,fontName,font)    [[NSAttributedString alloc] initWithString:text attributes:[NSDictionary dictionaryWithObjectsAndKeys: color, NSForegroundColorAttributeName, [UIFont fontWithName:fontName size:font], NSFontAttributeName ,nil]]
+#define    SepearateLineColor             [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1.0]
+#define    TextColorAlpha_54              [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.54]
+#define    TextColorAlpha_87              [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.87]
+#define    PositionUnassignedColor        [UIColor colorWithRed:156/255.0 green:168/255.0 blue:160/255.0 alpha:1.0]
+
+#pragma    -mark database
+
+#define    WorkPlaceType_0               @""//备用
+#define    WorkPlaceType_1               @"Entertainment/Seasonal"
+#define    WorkPlaceType_2               @"Technology/Software"
+#define    WorkPlaceType_3               @"Food Service/Hospitality"
+#define    WorkPlaceType_4               @"Healthcare/Medical"
+#define    WorkPlaceType_5              @"Professional Service/Education"
+#define    WorkPlaceType_6                @"Retail"
+#define    WorkPlaceType_7                @"Other"
+
+#define    EmployeeIdentity_Manahger      @"manager"
+#define    EmployeeIdentity_Employee      @"employee"
+
+//request type
+#define    RequestType_Unpaid             0
+#define    RequestType_Paid               1
+#define    RequestType_Sick               2
+#define    RequestType_Holiday            3
+
+//request waitting type
+#define    RequestWaitType_Pending        0
+#define    RequestWaitType_Accepted       1
+#define    RequestWaitType_Canceled       2
+#define    RequestWaitType_Expired        3
+
+//request action type
+#define    NeedYourAction                 @"Need Your Action"
+#define    AwaitingActionFromOthers       @"Awaiting Action From Others"
+#define    OthersRequest                  @"Others Request"
+
+
+#define    Nav_Bar_bgImage                @"nav_bar.png"
+
+#pragma    -mark all color
+#define    AppMainColor                   [UIColor colorWithRed:0/255.0 green:195/255.0 blue:0/255.0 alpha:1.0]
+#define    bgViewColor                    [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1.0]
+#define    SetColor(r,g,b,alp)            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:alp]
+#define    SetGrayColor(f,alp)            [UIColor colorWithRed:f/255.0 green:f/255.0 blue:f/255.0 alpha:alp]
+#define    DarkGrayColor                  [UIColor darkGrayColor]
+#define    LightGreeColor                 [UIColor lightGrayColor]
+#define    BlackColor                     [UIColor blackColor]
+#define    WhiteColor                     [UIColor whiteColor]
+#define    ClearColor                     [UIColor clearColor]
+
+#pragma    -mark text front
+#define    SetHelveticaNeueFont(size)     [UIFont fontWithName:@"HelveticaNeue" size:size]
+#define    SetHelveticaNeueBoldFont(size) [UIFont fontWithName:@"HelveticaNeue-Bold" size:size]
+
+#pragma    -mark language
+#define     InternationalL(str)        NSLocalizedStringFromTable(str,@"Localizable", nil)
+#define     InternationStr             @"(*str*)"
+#define     InternationalL_Str(str,m_str) \
+[InternationalL(str) stringByReplacingOccurrencesOfString:InternationStr withString:m_str]
+
+#define    Availability_Configuration_Title                      @"configurationtitle"
+#define    Availability_Configuration_StringEffectiveDate1       @"configurationeffectivedate1"
+#define    Availability_Configuration_StringEffectiveDate2       @"configurationeffectivedate2"
+#define    Availability_Configuration_YearMonthDay1              @"configurationeyear1"
+#define    Availability_Configuration_YearMonthDay2              @"configurationeyear2"
+#define    Availability_Configuration_Rotation                   @"configurationrotation"
+#define    Availability_Configuration_EmployeeUuid               @"configurationemployeeuuid"
+#define    Availability_Configuration_Notes                      @"configurationnotes"
+#define    Availability_Uuid                                     @"availabilityuuid"
+#define    Availability_ParentUuid                               @"availabilityparentuuid"
+#define    Availability_Week                                     @"availabilityweek"
+#define    Availability_IsAllDay                                 @"availabilityisallday"
+#define    Availability_State                                    @"availabilitystate"
+#define    Availability_FromTime                                 @"availabilityfromtime"
+#define    Availability_ToTime                                   @"availabilitytitime"
+#define    Availability_StampEffectiveStart                      @"availabilitystamp1"
+#define    Availability_StampEffectiveEnd                        @"availabilitystamp2"
+#define    Availability_JsonStringseparator                      @" | "
+
+
+#define    RequestDisposeState_ParentUuid                        @"requestdisposeparentuuid"
+#define    RequestDisposeState_ParentRequestUuid                 @"requestdisposeparentRequestUuid"
+#define    RequestDisposeState_SendRequestEmployeeUuid           @"requestdisposesendrequestemployeeuuid"
+#define    RequestDisposeState_State                             @"requestDisposeState"
+#define    RequestDisposeState_DisposeTime                       @"requestDisposeTime"
+#define    RequestDisposeState_JsonStringseparator               @" | "
+
+#define    CalendarEvent_SubscribeUuid                           @"calenadreventsubscribeuuid"
+#define    CalendarEvent_ShiftUuid                               @"calenadreventsshiftuuid"
+#define    CalendarEvent_EventIdentifier                         @"calenadreventidentifier"
+#define    CalendarEvent_JsonStringseparator                     @" | "
+
+#define    UpdateSidebarMenu                                     @"updateSidebarMenu"
+
+#define    Notification_NewTimeoffRequest               @"[New Time Off Request]"
+#define    Notification_AcceptedTimeoffRequest          @"[Time Off Request Accepted]"
+#define    Notification_DeclinedTimeoffRequest          @"[Time Off Request Declined]"
+#define    Notification_NewSwapRequest                  @"[New Swap Request]"
+#define    Notification_NewDropRequest              @"[New Drop Request]"
+#define    Notification_DeclinedSwapRequest         @"[Swap Request Declined]"
+#define    Notification_DeclinedDropRequest         @"[Drop Request Declined]"
+#define    Notification_AcceptedSwapRequest            @"[Swap Request Accepted]"
+#define    Notification_AcceptedDropRequest            @"[Drop Request Accepted]"
+#define    Notification_NewShift                        @"[New Shift]"
+#define    Notification_ModifiedShift                   @"[Shift Modified]"
+#define    Notification_DeletedShift                    @"[Shift Deleted]"
+#define    Notification_OpenShiftAllTaken               @"[Open Shift All Taken]"
+#define    Notification_OpenShiftTaken               @"[Open Shift Taken]"
+#define    Notification_NewEmployee                     @"[New Employee]"
+#define    Notification_AvailabilityChange              @"[Availability Change]"
+
+
+//http request type
+#define    requestType_POST            @"POST"
+#define    requestType_GET             @"GET"
+#define    requestType_PUT             @"PUT"
+#define    requestType_DELETE          @"DELETE"
+//api
+#define    baseURL                           @"https://schedule.us-east-1.elasticbeanstalk.com"
+#define    api_employee                      @"/api/v1/employee"
+#define    api_token                         @"/connect/token"
+#define    api_employeeWorkplaces            @"/api/v1/employee/workplace"
+#define    api_workplace                     @"/api/v1/workplace"
+#define    api_location                     @"/api/v1/location"
+#define    api_position                     @"/api/v1/position"
+
+
+#endif /* PrefixHeader_pch */

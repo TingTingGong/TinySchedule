@@ -1,4 +1,214 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Availability" representedClassName="Availability" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="managerUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rotation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_effectiveDate1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_effectiveDate2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_yearMonthDay1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_yearMonthDay2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subAvailabilities" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AvailabilityDetail" representedClassName="AvailabilityDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CalendarEvents" representedClassName="CalendarEvents" syncable="YES">
+        <attribute name="calendarIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeuUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventIdentifiers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subscribeUuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CurrentEmployee" representedClassName="CurrentEmployee" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headPortrait" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isManager" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPermitted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxHoursPerWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CurrentWorkPlace" representedClassName="CurrentWorkPlace" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeesCounts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isCreator" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPermitted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DeviceToken" representedClassName="DeviceToken" syncable="YES">
+        <attribute name="deviceToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endPointArn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Drop" representedClassName="Drop" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="declineDropUuids" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drop_accepteEmployeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dropUuids" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDrop" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isManagerAccepted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="managerUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oriShiftEmployeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentShiftUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="swap_acceptShiftUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="swapShiftUuid1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="swapShiftUuid2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employees" representedClassName="Employees" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headPortrait" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isManager" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPermitted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxHoursPerWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HistoryShiftTime" representedClassName="HistoryShiftTime" syncable="YES">
+        <attribute name="string_break" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_hours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Locations" representedClassName="Locations" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employees" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Positions" representedClassName="Positions" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="employees" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RequestAllDisposeState" representedClassName="RequestAllDisposeState" syncable="YES">
+        <attribute name="disposeState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="disposeTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentRequestUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sendRequestEmployeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Requests" representedClassName="Requests" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="disposeDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="managerUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paidHours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stamp_endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stamp_startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_startTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="waitType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Setting" representedClassName="Setting" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email_isAvailabilityChange" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email_isDropRequest" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email_isNewEmployee" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email_isScheduleUpdate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email_isTimeOffTequest" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email_noNotifyEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email_noNotifyStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="managerUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notification_isAvailabilityChange" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notification_isDropRequest" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notification_isNewEmployee" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notification_isScheduleUpdate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notification_isTimeOffTequest" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notification_noNotifyEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notification_noNotifyStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Shifts" representedClassName="Shifts" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="haveTakedEmployeesNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTake" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locationUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="needEmployeesNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openShift_employees" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionUuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_month" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_week" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="string_year" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="takeState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalHours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unpaidBreak" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WorkPlaces" representedClassName="WorkPlaces" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeesCounts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isCreator" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPermitted" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Availability" positionX="-63" positionY="-18" width="128" height="270"/>
+        <element name="AvailabilityDetail" positionX="-9" positionY="135" width="128" height="75"/>
+        <element name="CalendarEvents" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="CurrentEmployee" positionX="-36" positionY="9" width="128" height="180"/>
+        <element name="CurrentWorkPlace" positionX="-18" positionY="27" width="128" height="180"/>
+        <element name="DeviceToken" positionX="0" positionY="45" width="128" height="105"/>
+        <element name="Drop" positionX="18" positionY="63" width="128" height="315"/>
+        <element name="Employees" positionX="36" positionY="81" width="128" height="180"/>
+        <element name="HistoryShiftTime" positionX="-9" positionY="36" width="128" height="105"/>
+        <element name="Locations" positionX="9" positionY="54" width="128" height="135"/>
+        <element name="Positions" positionX="18" positionY="63" width="128" height="105"/>
+        <element name="RequestAllDisposeState" positionX="27" positionY="72" width="128" height="120"/>
+        <element name="Requests" positionX="36" positionY="81" width="128" height="270"/>
+        <element name="Setting" positionX="45" positionY="90" width="128" height="360"/>
+        <element name="Shifts" positionX="-9" positionY="36" width="128" height="435"/>
+        <element name="WorkPlaces" positionX="0" positionY="45" width="128" height="180"/>
+    </elements>
 </model>
