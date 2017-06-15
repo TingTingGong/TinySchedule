@@ -49,6 +49,7 @@
 #define IntroduceViewsNumbers 4
 
 #pragma    CurrentApplicationName                @"Tiny Schedule"
+#define    GoogleMapApiKey                       @"AIzaSyCga-_wSdGPT2A6r3T1AVcJJKbKYRzqy2c"        
 
 #pragma    -mark all width and height
 #define    ScreenFrame                    [UIScreen mainScreen].frame

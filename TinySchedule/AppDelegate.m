@@ -77,8 +77,8 @@
     [application setApplicationIconBadgeNumber:[[[launchOptions valueForKey:@"aps"]valueForKey:@"badge"]integerValue] + badgeNumber];
     
     //Google Maps 注册
-    [GMSServices provideAPIKey:@"AIzaSyCga-_wSdGPT2A6r3T1AVcJJKbKYRzqy2c"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyCga-_wSdGPT2A6r3T1AVcJJKbKYRzqy2c"];
+    [GMSServices provideAPIKey:GoogleMapApiKey];
+    [GMSPlacesClient provideAPIKey:GoogleMapApiKey];
     
     [self getCurrntEmployeeAndWorkPlace];
     
@@ -93,6 +93,7 @@
 
     [[UINavigationBar appearance] setBarTintColor:AppMainColor];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     
     return YES;
 }
