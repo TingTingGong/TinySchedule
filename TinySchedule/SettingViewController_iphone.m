@@ -30,20 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.title = @"Apple";
-    content.subtitle = @"Apple Developer";
-    content.body = @"Hello,world!";
-    content.badge = [NSNumber numberWithInt:1];
-    content.sound = [UNNotificationSound soundNamed:@""];
-    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
-    NSString *requestIdentifier = @"Request2";
-    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier content:content trigger:trigger];
-    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * error){
-    }];
 
-    
     [self initData];
     
     // Do any additional setup after loading the view from its nib.

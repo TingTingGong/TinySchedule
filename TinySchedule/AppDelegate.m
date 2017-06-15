@@ -61,30 +61,16 @@
     AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:DefaultServiceRegionType credentialsProvider:credentialsProvider];
     AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;
     
-    // Sets up Mobile Push Notification
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    center.delegate = self;
-    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        if (!error) {
-            [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-            [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                NSLog(@"通知配置信息:\n%@",settings);
-                [application registerForRemoteNotifications];
-            }];
-        }
-    }];
-    NSInteger badgeNumber = [application applicationIconBadgeNumber];
-    [application setApplicationIconBadgeNumber:[[[launchOptions valueForKey:@"aps"]valueForKey:@"badge"]integerValue] + badgeNumber];
     
-    //Google Maps 注册
-    [GMSServices provideAPIKey:@"AIzaSyCga-_wSdGPT2A6r3T1AVcJJKbKYRzqy2c"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyCga-_wSdGPT2A6r3T1AVcJJKbKYRzqy2c"];
+    //Google Maps
+    [GMSServices provideAPIKey:GoogleMapApiKey];
+    [GMSPlacesClient provideAPIKey:GoogleMapApiKey];
     
     [self getCurrntEmployeeAndWorkPlace];
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];   //设置通用背景颜色
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     LeftSortsViewController *leftVC = [[LeftSortsViewController alloc] init];
@@ -196,6 +182,38 @@
     }
 }
 
+#pragma notification
+
+-(void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
+{
+    //[UIApplication sharedApplication].applicationIconBadgeNumber = 2;
+    
+    if (self.currentEmployee != nil && self.currentWorkplace != nil) {
+        NSLog(@"");
+    }
+    //根据当前登陆的用户判断，是否在休息期间，是否打开了相应分类的提醒通知,并且是在currentemployee和currentworkplace都不为nil的情况下
+    
+    UNNotificationContent *content = notification.request.content;
+    NSLog(@"%@",content.title);
+    NSLog(@"%@",content.subtitle);
+    NSLog(@"%@",content.body);
+    NSLog(@"%@",content.categoryIdentifier);
+    UNNotificationRequest *request = notification.request;
+    NSLog(@"%@",request.identifier);
+    if ([content.title isEqualToString:@"Apple"]) {
+        
+        completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
+    }
+}
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler {
+    
+    //根据identifier去获取相应类别的数据，并跳到指定页面
+    
+    //NSDictionary *userInfo = response.notification.request.content.userInfo;
+    UNNotificationRequest *request = response.notification.request;
+    NSLog(@"%@",request.identifier);
+}
+
 #pragma mark -
 #pragma mark UIDevice Extensions
 -(NSString*)platform
@@ -257,80 +275,7 @@
     
 }
 
-#pragma mark notification
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    NSString *deviceTokenString = [[[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    NSLog(@"deviceTokenString: %@", deviceTokenString);
-    [[NSUserDefaults standardUserDefaults] setObject:deviceTokenString forKey:@"deviceToken"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    NSString * endPointArn = [[NSUserDefaults standardUserDefaults] objectForKey:@"awsEndPointArnString"];
-    if(endPointArn.length <=0 )
-    {
-        //[self createEndPointArnResult:^(BOOL success){}];
-    }
-    else
-    {
-        //[self checkEndPointArnResult:endPointArn];
-    }
-    
-}
 
-//- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)())completionHandler {
-//    
-//    AWSMobileAnalytics *mobileAnalytics = [AWSMobileAnalytics mobileAnalyticsForAppId:MobileAnalyticsAppId];
-//    id<AWSMobileAnalyticsEventClient> eventClient = mobileAnalytics.eventClient;
-//    id<AWSMobileAnalyticsEvent> pushNotificationEvent = [eventClient createEventWithEventType:@"PushNotificationEvent"];
-//    
-//    NSString *action = @"Undefined";
-//    if ([identifier isEqualToString:@"READ_IDENTIFIER"]) {
-//        action = @"read";
-//        NSLog(@"User selected 'Read'");
-//    } else if ([identifier isEqualToString:@"DELETE_IDENTIFIER"]) {
-//        action = @"Deleted";
-//        NSLog(@"User selected `Delete`");
-//    } else {
-//        action = @"Undefined";
-//    }
-//    
-//    [pushNotificationEvent addAttribute:action forKey:@"Action"];
-//    [eventClient recordEvent:pushNotificationEvent];
-//    
-//    completionHandler();
-//}
-
-
--(void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
-{
-    //[UIApplication sharedApplication].applicationIconBadgeNumber = 2;
-    
-    if (self.currentEmployee != nil && self.currentWorkplace != nil) {
-        NSLog(@"");
-    }
-    //根据当前登陆的用户判断，是否在休息期间，是否打开了相应分类的提醒通知,并且是在currentemployee和currentworkplace都不为nil的情况下
-    
-    UNNotificationContent *content = notification.request.content;
-    NSLog(@"%@",content.title);
-    NSLog(@"%@",content.subtitle);
-    NSLog(@"%@",content.body);
-    NSLog(@"%@",content.categoryIdentifier);
-    UNNotificationRequest *request = notification.request;
-    NSLog(@"%@",request.identifier);
-    if ([content.title isEqualToString:@"Apple"]) {
-        
-        completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
-    }
-}
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler {
-    
-    //根据identifier去获取相应类别的数据，并跳到指定页面
-    
-    //NSDictionary *userInfo = response.notification.request.content.userInfo;
-    UNNotificationRequest *request = response.notification.request;
-    NSLog(@"%@",request.identifier);
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
