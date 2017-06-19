@@ -1004,7 +1004,7 @@
         }
 
         if (positionUuid != nil) {
-            Positions *position = [DatabaseManager getPositionByUuid:positionUuid];
+            //Positions *position = [DatabaseManager getPositionByUuid:positionUuid];
 //            if (position.isDelete == 0 && position != nil) {
 //                model.shift_positionUuid = positionUuid;
 //            }

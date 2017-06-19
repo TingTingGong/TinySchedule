@@ -2,7 +2,7 @@
 //  LeftSortsViewController.m
 //  LGDeckViewController
 //
-//  Created by jamie on 15/3/31.
+//  Created by TinyWorks_Dev on 15/3/31.
 //  Copyright (c) 2015年 Jamie-Ling. All rights reserved.
 //
 

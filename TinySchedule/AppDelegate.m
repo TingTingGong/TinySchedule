@@ -73,8 +73,6 @@
             }];
         }
     }];
-    NSInteger badgeNumber = [application applicationIconBadgeNumber];
-    [application setApplicationIconBadgeNumber:[[[launchOptions valueForKey:@"aps"]valueForKey:@"badge"]integerValue] + badgeNumber];
     
     //Google Maps 注册
     [GMSServices provideAPIKey:GoogleMapApiKey];
@@ -84,7 +82,7 @@
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];   //设置通用背景颜色
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     LeftSortsViewController *leftVC = [[LeftSortsViewController alloc] init];
@@ -319,10 +317,6 @@
     NSLog(@"%@",content.categoryIdentifier);
     UNNotificationRequest *request = notification.request;
     NSLog(@"%@",request.identifier);
-    if ([content.title isEqualToString:@"Apple"]) {
-        
-        completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
-    }
 }
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler {
     

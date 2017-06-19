@@ -2,7 +2,7 @@
 //  UIView_extra.m
 //  Woyoli
 //
-//  Created by jamie on 14-11-25.
+//  Created by TinyWorks_Dev on 14-11-25.
 //  Copyright (c) 2014年 Missionsky. All rights reserved.
 //
 
