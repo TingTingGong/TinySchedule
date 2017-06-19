@@ -46,7 +46,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSLog(@"test");
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]/*如果不是第二次使用*/)
     {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];//设置第二次使用的value值为yes
