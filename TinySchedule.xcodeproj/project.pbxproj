@@ -1735,6 +1735,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = TinySchedule/TinySchedule.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hongmeng Zhang (CXH9U4NS6E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P27NWVK28H;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TinySchedule/PrefixHeader.pch";
 				INFOPLIST_FILE = TinySchedule/Info.plist;
@@ -1742,7 +1743,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.btgs.tinyschedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1aa85705-ff7c-4a5b-8101-ce814a668abd";
+				PROVISIONING_PROFILE = "293fe541-c366-48fe-90ff-662d8173397e";
 				PROVISIONING_PROFILE_SPECIFIER = "BTGS TINYSCHEDULE";
 			};
 			name = Debug;
@@ -1764,7 +1765,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.btgs.tinyschedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "BTGS TINYSCHEDULE";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

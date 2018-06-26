@@ -182,6 +182,7 @@
         newParentUuid = [StringManager getItemID];
         
         modifySubAvailabilities = nil;
+        
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         NSDateComponents *comps = [[NSDateComponents alloc] init];
         NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday;
