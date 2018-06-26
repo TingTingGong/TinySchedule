@@ -180,6 +180,7 @@
                 
                 [UserEntity setLogInSuccessfullyToken:[NSString stringWithFormat:@"%@ %@",[dict objectForKey:@"token_type"],[dict objectForKey:@"access_token"]]];
                 
+                
                 [HttpRequestManager requestWithType:requestType_GET withUrlString:api_employee withParaments:nil withSuccessBlock:^(NSData *data,NSHTTPURLResponse *response){
                     
                     NSDictionary *dict = [DatabaseManager dictionaryWithJsondata:data];

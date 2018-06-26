@@ -2,7 +2,7 @@
 //  LeftSlideViewController.m
 //  LeftSlideViewController
 //
-//  Created by huangzhenyu on 15/06/18.
+//  Created by TinyWorks_Dev on 15/06/18.
 //  Copyright (c) 2015年 huangzhenyu. All rights reserved.
 
 #import "LeftSlideViewController.h"

@@ -2,7 +2,7 @@
 //  LoadingView.m
 //  测试1
 //
-//  Created by dzk on 16/6/13.
+//  Created by TinyWorks_Dev on 16/6/13.
 //  Copyright © 2016年 dzk. All rights reserved.
 //
 
